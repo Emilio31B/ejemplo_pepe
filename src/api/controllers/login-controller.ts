@@ -69,15 +69,9 @@ class LoginController implements IControllerBase {
   access = (req: Request, res: Response) => {
     let user = req.body.user
     let password = req.body.password
-    console.log('1 ++++++++++++++++++++++++++++++')
-    console.log(user)
-    console.log(password)
-    console.log('2 ++++++++++++++++++++++++++++++')
     if(user == 'admin' && password == 'ulima'){
-      console.log('3 ++++++++++++++++++++++++++++++')
       res.redirect('/')
     }else{
-      console.log('4 ++++++++++++++++++++++++++++++')
       let locals = {
         title: 'Bienvenido',
         constants: constants,
